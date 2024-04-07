@@ -89,6 +89,9 @@ target_link_libraries(${BIN_NAME} PRIVATE
     Qt6::Gui
     Qt6::Quick
     Qt6::Concurrent
+    Qt6::GuiPrivate
+    Qt6::WidgetsPrivate
+    Qt6::QuickPrivate
     # Qt6::X11Extras
     Qt6::DBus
     Qt6::Svg

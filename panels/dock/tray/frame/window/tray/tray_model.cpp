@@ -280,8 +280,9 @@ bool TrayModel::canDropMimeData(const QMimeData *data, Qt::DropAction action, in
     Q_UNUSED(column)
 
     TrayIconType iconType = parent.data(TrayModel::Role::TypeRole).value<TrayIconType>();
-    if (iconType == TrayIconType::ExpandIcon)
+    if (iconType == TrayIconType::ExpandIcon) {
         return false;
+    }
 
     return data->formats().contains(TRAY_DRAG_FALG);
 }
